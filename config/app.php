@@ -159,6 +159,7 @@ return [
         // MisReclamos\Providers\BroadcastServiceProvider::class,
         MisReclamos\Providers\EventServiceProvider::class,
         MisReclamos\Providers\RouteServiceProvider::class,
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
 
     ],
 
