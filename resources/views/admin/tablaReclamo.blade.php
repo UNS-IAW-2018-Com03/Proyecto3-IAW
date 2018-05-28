@@ -12,7 +12,7 @@
             </div>
             <div class="panel-body">
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <table class="table table-striped table-bordered table-hover" id="tablaReclamos-Tabla">
                         <thead>
                             <tr>
                                 <th>Id Reclamo</th>

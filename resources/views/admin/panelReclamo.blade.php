@@ -66,7 +66,7 @@
             </div>
             <div class="panel-body">
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <table class="table table-striped table-bordered table-hover" id="tablaReclamos-Panel">
                         <thead>
                             <tr>
                                 <th>Id Reclamo</th>
@@ -97,5 +97,9 @@
     </div>
 </div>
 <!--Fin Tabla Reclamos -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyfTLWyCHhqEvX3AVXJprC3HsrSkJzQVM"></script>
+<script src="{{ asset('js/jquery-3.3.1.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/controllerMapa.js') }}" type="text/javascript"></script>
 
 @endsection
