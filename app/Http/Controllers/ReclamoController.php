@@ -37,8 +37,13 @@ class ReclamoController extends Controller
     public function store(Request $request)
     {
         $reclamoTipo = new ReclamoTipo();
+        if($request->hasFile('imagen')){
+          $file = $request->file('imagen');
+          $name = $file->getClientOriginalName();
+          $file->move(public_path().'/images/',$name);
+        }
         $reclamoTipo->titulo = $request->input('titulo');
-        $reclamoTipo->imagen = '/img/icon2.png';
+        $reclamoTipo->imagen = $name;
         $reclamoTipo->save();
         return 'Saved';
     }
