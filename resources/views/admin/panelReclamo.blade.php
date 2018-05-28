@@ -11,8 +11,8 @@
         <img src="<?php echo asset('images/bars.png')?>" class="imagen-cuadrada"/>
       </div>
       <div class="text-box" >
-        <p class="main-text">30 Nuevos</p>
-        <p class="text-muted">Reclamos</p>
+        <p class="main-text">{{$cantTotal}} Reclamos</p>
+        <p class="text-muted">Total</p>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
         <img src="<?php echo asset('images/pending.png')?>" class="imagen-cuadrada"/>
       </div>
       <div class="text-box" >
-        <p class="main-text">20 Reclamos</p>
+        <p class="main-text">{{$cantPendiente}} Reclamos</p>
         <p class="text-muted">Pendientes</p>
       </div>
     </div>
@@ -33,7 +33,7 @@
         <img src="<?php echo asset('images/process.png')?>" class="imagen-cuadrada"/>
       </div>
       <div class="text-box" >
-        <p class="main-text">26 Tareas</p>
+        <p class="main-text">{{$cantProceso}} Reclamos</p>
         <p class="text-muted">En proceso</p>
       </div>
     </div>
@@ -44,7 +44,7 @@
         <img src="<?php echo asset('images/confirm.png')?>" class="imagen-cuadrada"/>
       </div>
       <div class="text-box" >
-        <p class="main-text">15 Reclamos</p>
+        <p class="main-text">{{$cantFinalizado}} Reclamos</p>
         <p class="text-muted">Finalizados</p>
       </div>
     </div>
@@ -73,11 +73,21 @@
                                 <th>Tipo</th>
                                 <th>Usuario</th>
                                 <th>Fecha - Hora</th>
+                                <th>Descripción</th>
                                 <th>Estado</th>
                             </tr>
                         </thead>
                         <tbody>
-
+                          @foreach($reclamos as $reclamo)
+                          <tr>
+                            <td>{{$reclamo->id}}</td>
+                            <td>{{$reclamo->titulo}}</td>
+                            <td>{{$reclamo->user}}</td>
+                            <td>{{$reclamo->fecha}}</td>
+                            <td>{{$reclamo->descripcion}}</td>
+                            <td>{{$reclamo->estado}}</td>
+                          </tr>
+                          @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -3,6 +3,7 @@
 namespace MisReclamos\Http\Controllers;
 
 use Illuminate\Http\Request;
+use MisReclamos\ReclamoTipo;
 
 class ReclamoController extends Controller
 {
@@ -13,7 +14,8 @@ class ReclamoController extends Controller
      */
     public function index()
     {
-        return view('reclamos.listarReclamo');
+        $reclamosTipo =  ReclamoTipo::all();
+        return view('reclamos.listarReclamo',compact('reclamosTipo'));
     }
 
     /**
@@ -34,7 +36,11 @@ class ReclamoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reclamoTipo = new ReclamoTipo();
+        $reclamoTipo->titulo = $request->input('titulo');
+        $reclamoTipo->imagen = '/img/icon2.png';
+        $reclamoTipo->save();
+        return 'Saved';
     }
 
     /**

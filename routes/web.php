@@ -14,3 +14,5 @@
 Route::get('/', 'PanelController@index');
 
 Route::resource('reclamos','ReclamoController');
+
+Route::get('/tablaDeReclamos', 'PanelController@tabla');

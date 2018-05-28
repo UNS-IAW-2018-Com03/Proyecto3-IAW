@@ -55,12 +55,11 @@
           <ul class="nav nav-sidebar">
             <li class="active">Administrar Reclamos</li>
             <li><a href="/reclamos/create">Agregar</a></li>
-            <li><a href="/reclamos">Modificar</a></li>
-            <li><a href="/reclamos">Eliminar</a></li>
+            <li><a href="/reclamos">Modificar/Eliminar</a></li>
           </ul>
           <ul class="nav nav-sidebar">
 			      <li class="active">Resolver Reclamos</li>
-            <li><a href="/reclamos">Tabla de Reclamos</a></li>
+            <li><a href="/tablaDeReclamos">Tabla de Reclamos</a></li>
           </ul>
         </div>
         <!-- Fin SideNav -->
