@@ -33,13 +33,13 @@
                             <td>{{$reclamo->estado}}</td>
                             <td>
                               @if($reclamo->estado != 'Pendiente')
-                              <a href="#" class="btn btn-danger" data-toggle="modal">Pendiente</a>
+                              <a href="/tablaDeReclamos/{{$reclamo->id}}/setPendiente" class="btn btn-danger" data-toggle="modal">Pendiente</a>
                               @endif
                               @if($reclamo->estado != 'Proceso')
-                              <a href="#" class="btn btn-warning" data-toggle="modal">Proceso</a>
+                              <a href="/tablaDeReclamos/{{$reclamo->id}}/setProceso" class="btn btn-warning" data-toggle="modal">Proceso</a>
                               @endif
-                              @if($reclamo->estado != 'Finalizar')
-                              <a href="#" class="btn btn-success" data-toggle="modal">Finalizar</a>
+                              @if($reclamo->estado != 'Finalizado')
+                              <a href="/tablaDeReclamos/{{$reclamo->id}}/setFinalizado" class="btn btn-success" data-toggle="modal">Finalizar</a>
                               @endif
                             </td>
                           </tr>

@@ -35,4 +35,28 @@ class PanelController extends Controller
         $reclamos =  ReclamoRealizado::all();
         return view('admin.tablaReclamo',compact('reclamos'));
     }
+
+    public function setPendiente($id)
+    {
+        $reclamo =  ReclamoRealizado::find($id);
+        $reclamo->estado = 'Pendiente';
+        $reclamo->save();
+        return redirect()->route('tablaDeReclamos');
+    }
+
+    public function setProceso($id)
+    {
+        $reclamo =  ReclamoRealizado::find($id);
+        $reclamo->estado = 'Proceso';
+        $reclamo->save();
+        return redirect()->route('tablaDeReclamos');
+    }
+
+    public function setFinalizado($id)
+    {
+        $reclamo =  ReclamoRealizado::find($id);
+        $reclamo->estado = 'Finalizado';
+        $reclamo->save();
+        return redirect()->route('tablaDeReclamos');
+    }
 }
