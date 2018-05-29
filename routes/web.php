@@ -22,3 +22,5 @@ Route::get('/tablaDeReclamos/{id}/setPendiente', 'PanelController@setPendiente')
 Route::get('/tablaDeReclamos/{id}/setProceso', 'PanelController@setProceso');
 
 Route::get('/tablaDeReclamos/{id}/setFinalizado', 'PanelController@setFinalizado');
+
+Route::get('/reclamosRealizados','PanelController@getReclamosRealizados');

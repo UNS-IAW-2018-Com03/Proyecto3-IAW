@@ -59,4 +59,10 @@ class PanelController extends Controller
         $reclamo->save();
         return redirect()->route('tablaDeReclamos');
     }
+
+    public function getReclamosRealizados()
+    {
+        $reclamosRealizados = ReclamoRealizado::All();
+        return $reclamosRealizados;
+    }
 }

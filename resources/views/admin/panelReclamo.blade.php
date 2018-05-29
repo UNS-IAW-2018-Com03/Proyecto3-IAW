@@ -71,10 +71,10 @@
                             <tr>
                                 <th>Id Reclamo</th>
                                 <th>Tipo</th>
-                                <th>Usuario</th>
                                 <th>Fecha - Hora</th>
                                 <th>Descripción</th>
                                 <th>Estado</th>
+                                <th>Ubicación</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -82,10 +82,10 @@
                           <tr>
                             <td>{{$reclamo->id}}</td>
                             <td>{{$reclamo->titulo}}</td>
-                            <td>{{$reclamo->user}}</td>
                             <td>{{$reclamo->fecha}}</td>
                             <td>{{$reclamo->descripcion}}</td>
                             <td>{{$reclamo->estado}}</td>
+                            <td><button onclick="goTo({{$reclamo->latitud}},{{$reclamo->longitud}})">Ver</button></td>
                           </tr>
                           @endforeach
                         </tbody>
@@ -97,7 +97,6 @@
     </div>
 </div>
 <!--Fin Tabla Reclamos -->
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyfTLWyCHhqEvX3AVXJprC3HsrSkJzQVM"></script>
 <script src="{{ asset('js/jquery-3.3.1.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/controllerMapa.js') }}" type="text/javascript"></script>
