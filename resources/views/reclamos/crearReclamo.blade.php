@@ -5,7 +5,7 @@
 @section('content')
   <h1 class="page-header">Creación de Tipo de Reclamo</h1>
   <div class="container">
-    <form class="form-group" method="POST" action="/reclamos" enctype="multipart/form-data">
+    <form class="form-group" method="POST" action="/reclamo" enctype="multipart/form-data">
       @csrf
       <div class="form-group">
           <label for="titulo">Titulo</label>

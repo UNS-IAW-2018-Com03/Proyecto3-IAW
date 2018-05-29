@@ -13,6 +13,6 @@
 
 Route::get('/', 'PanelController@index');
 
-Route::resource('reclamos','ReclamoController');
+Route::resource('reclamo','ReclamoController');
 
 Route::get('/tablaDeReclamos', 'PanelController@tabla');

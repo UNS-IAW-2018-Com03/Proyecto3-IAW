@@ -42,10 +42,13 @@ class ReclamoController extends Controller
           $name = $file->getClientOriginalName();
           $file->move(public_path().'/images/',$name);
         }
+        else{
+          $name = 'default';
+        }
         $reclamoTipo->titulo = $request->input('titulo');
         $reclamoTipo->imagen = $name;
         $reclamoTipo->save();
-        return 'Saved';
+        return redirect()->route('reclamo.index');
     }
 
     /**
@@ -65,9 +68,10 @@ class ReclamoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(String $id)
     {
-        return view('reclamos.modificarReclamo');
+        $reclamoTipo = ReclamoTipo::find($id);
+        return view('reclamos.modificarReclamo',compact('reclamoTipo'));
     }
 
     /**
@@ -77,9 +81,18 @@ class ReclamoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, String $id)
     {
-        //
+        $reclamoTipo = ReclamoTipo::find($id);
+        if($request->hasFile('imagen')){
+          $file = $request->file('imagen');
+          $name = $file->getClientOriginalName();
+          $file->move(public_path().'/images/',$name);
+          $reclamoTipo->imagen = $name;
+        }
+        $reclamoTipo->titulo = $request->input('titulo');
+        $reclamoTipo->save();
+        return redirect()->route('reclamo.index');
     }
 
     /**
@@ -88,8 +101,10 @@ class ReclamoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(String $id)
     {
-        //
+        $reclamoTipo = ReclamoTipo::find($id);
+        $reclamoTipo->delete();
+        return redirect()->route('reclamo.index');
     }
 }

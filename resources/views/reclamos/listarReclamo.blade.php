@@ -28,8 +28,12 @@
                               <td>{{$reclamoTipo->titulo}}</td>
                               <td>{{$reclamoTipo->imagen}}</td>
                               <td>
-                                  <a href="#" class="btn btn-warning" data-toggle="modal">E</a>
-                                  <button type="button" class="btn btn-danger">X</button>
+                                  <a href="/reclamo/{{$reclamoTipo->id}}/edit" class="btn btn-warning" data-toggle="modal">Edit</a>
+                                  <form action="/reclamo/{{ $reclamoTipo->id }}" method="POST">
+                                    @method('DELETE');
+                                    @csrf
+                                    <button class="btn btn-danger" type="submit">Delete</button>
+                                  </form>
                               </td>
                             </tr>
                             @endforeach

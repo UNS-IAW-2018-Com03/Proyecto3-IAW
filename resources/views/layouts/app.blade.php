@@ -54,8 +54,8 @@
           </ul>
           <ul class="nav nav-sidebar">
             <li class="active">Administrar Reclamos</li>
-            <li><a href="/reclamos/create">Agregar</a></li>
-            <li><a href="/reclamos">Modificar/Eliminar</a></li>
+            <li><a href="/reclamo/create">Agregar</a></li>
+            <li><a href="/reclamo">Modificar/Eliminar</a></li>
           </ul>
           <ul class="nav nav-sidebar">
 			      <li class="active">Resolver Reclamos</li>
