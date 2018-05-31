@@ -65,4 +65,9 @@ class PanelController extends Controller
         $reclamosRealizados = ReclamoRealizado::All();
         return $reclamosRealizados;
     }
+
+    public function getMapaCalor(){
+        $reclamos =  ReclamoRealizado::all();
+        return view('admin.mapaCalor',compact('reclamos'));
+    }
 }

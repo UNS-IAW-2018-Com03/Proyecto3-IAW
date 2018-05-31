@@ -5,21 +5,13 @@ Funcion que inicializa el mapa
 */
 $(function() {
       map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 12,
+      zoom: 13,
       center: {lat: -38.7183177, lng: -62.2663478},
       mapTypeId: 'terrain'
     });
     mostrarTodosReclamosRealizados();
-    //heatMap();
 });
 
-/*
-Funcion que inicializa el mapa de calor
-*/
-function heatMap() {
-  map = new google.maps.visualization.HeatmapLayer();
-
-}
 
 /*
 Funcion que mustra todoso los reclamos realizados que estan almacenados

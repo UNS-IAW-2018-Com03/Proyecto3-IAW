@@ -11,9 +11,21 @@
 |
 */
 
-Route::get('/', 'PanelController@index');
-
+/*
+Administrador de Tipo de Reclamos
+|--------------------------------------------------------------------------
+*/
 Route::resource('reclamo','ReclamoController');
+/*
+|--------------------------------------------------------------------------
+*/
+
+
+/*
+Panel de Control de Reclamos Realizados
+|--------------------------------------------------------------------------
+*/
+Route::get('/', 'PanelController@index');
 
 Route::get('/tablaDeReclamos', 'PanelController@tabla')->name('tablaDeReclamos');
 
@@ -24,3 +36,8 @@ Route::get('/tablaDeReclamos/{id}/setProceso', 'PanelController@setProceso');
 Route::get('/tablaDeReclamos/{id}/setFinalizado', 'PanelController@setFinalizado');
 
 Route::get('/reclamosRealizados','PanelController@getReclamosRealizados');
+
+Route::get('/mapaCalor','PanelController@getMapaCalor');
+/*
+|--------------------------------------------------------------------------
+*/

@@ -49,7 +49,7 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active">Panel de Reclamos</li>
-            <li><a href="/">Mapa</a></li>
+            <li><a href="/mapaCalor">Mapa de Calor</a></li>
             <li><a href="/">Tabla de Reclamos</a></li>
           </ul>
           <ul class="nav nav-sidebar">
