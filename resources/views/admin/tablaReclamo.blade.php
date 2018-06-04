@@ -53,5 +53,9 @@
     </div>
 </div>
 <!--Fin Tabla Reclamos -->
+<script src="{{ asset('js/jquery-3.3.1.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/jquery.dataTables.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/dataTables.bootstrap.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/controllerTablaResolver.js') }}" type="text/javascript"></script>
 
 @endsection

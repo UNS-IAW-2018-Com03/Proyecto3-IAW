@@ -1,18 +1,18 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="<?php echo asset('images/icon_nav.png')?>">
+    <link rel="icon" href="{{ asset('images/icon_nav.png') }}">
     <title>Mis Reclamos - @yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"/>
 
 
     <!-- Custom styles -->
-    <link href="<?php echo asset('css/dashboard.css')?>" rel="stylesheet">
-    <link href="<?php echo asset('css/custom.css')?>" rel="stylesheet" />
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
     <!-- TABLE STYLES-->
-	  <link href="<?php echo asset('css/dataTables.bootstrap.css')?>" rel="stylesheet" />
+	  <link href="{{ asset('css/dataTables.bootstrap.css') }}" rel="stylesheet" />
 
 
   </head>
@@ -73,5 +73,7 @@
     </div>
 
   <script src="{{ asset('js/jquery-3.3.1.min.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('js/jquery.dataTables.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('js/dataTables.bootstrap.js') }}" type="text/javascript"></script>
   </body>
 </html>

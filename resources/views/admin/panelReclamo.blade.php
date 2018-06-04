@@ -97,8 +97,11 @@
     </div>
 </div>
 <!--Fin Tabla Reclamos -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyfTLWyCHhqEvX3AVXJprC3HsrSkJzQVM&libraries=visualization"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyfTLWyCHhqEvX3AVXJprC3HsrSkJzQVM"></script>
 <script src="{{ asset('js/jquery-3.3.1.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/jquery.dataTables.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/dataTables.bootstrap.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/controllerMapa.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/controllerTablaPanel.js') }}" type="text/javascript"></script>
 
 @endsection
