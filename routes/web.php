@@ -10,12 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use MisReclamos\Http\Middleware\CheckLogin;
 
 /*
 Administrador de Tipo de Reclamos
 |--------------------------------------------------------------------------
 */
-Route::resource('reclamo','ReclamoController');
+Route::resource('reclamo','ReclamoController')->middleware(CheckLogin::class);
 /*
 |--------------------------------------------------------------------------
 */
@@ -25,19 +26,33 @@ Route::resource('reclamo','ReclamoController');
 Panel de Control de Reclamos Realizados
 |--------------------------------------------------------------------------
 */
-Route::get('/', 'PanelController@index');
+Route::get('/tablaPanel', 'PanelController@index')->name('panelReclamo')->middleware(CheckLogin::class);
 
-Route::get('/tablaDeReclamos', 'PanelController@tabla')->name('tablaDeReclamos');
+Route::get('/tablaDeReclamos', 'PanelController@tabla')->name('tablaDeReclamos')->middleware(CheckLogin::class);
 
-Route::get('/tablaDeReclamos/{id}/setPendiente', 'PanelController@setPendiente');
+Route::get('/tablaDeReclamos/{id}/setPendiente', 'PanelController@setPendiente')->middleware(CheckLogin::class);
 
-Route::get('/tablaDeReclamos/{id}/setProceso', 'PanelController@setProceso');
+Route::get('/tablaDeReclamos/{id}/setProceso', 'PanelController@setProceso')->middleware(CheckLogin::class);
 
-Route::get('/tablaDeReclamos/{id}/setFinalizado', 'PanelController@setFinalizado');
+Route::get('/tablaDeReclamos/{id}/setFinalizado', 'PanelController@setFinalizado')->middleware(CheckLogin::class);
 
-Route::get('/reclamosRealizados','PanelController@getReclamosRealizados');
+Route::get('/reclamosRealizados','PanelController@getReclamosRealizados')->middleware(CheckLogin::class);
 
-Route::get('/mapaCalor','PanelController@getMapaCalor');
+Route::get('/mapaCalor','PanelController@getMapaCalor')->middleware(CheckLogin::class);
+/*
+|--------------------------------------------------------------------------
+*/
+
+
+/*
+Login de Admin
+|--------------------------------------------------------------------------
+*/
+Route::get('/','LoginController@index')->name('login');
+
+Route::get('/logout','LoginController@logout')->name('logout');
+
+Route::post('/login','LoginController@login');
 /*
 |--------------------------------------------------------------------------
 */

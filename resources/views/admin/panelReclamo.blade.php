@@ -8,7 +8,7 @@
   <div class="col-md-3 col-sm-6 col-xs-6">
     <div class="panel-back noti-box">
       <div class="">
-        <img src="<?php echo asset('images/bars.png')?>" class="imagen-cuadrada"/>
+        <img src="{{asset('images/bars.png')}}" class="imagen-cuadrada"/>
       </div>
       <div class="text-box" >
         <p class="main-text">{{$cantTotal}} Reclamos</p>
@@ -19,7 +19,7 @@
   <div class="col-md-3 col-sm-6 col-xs-6">
     <div class="panel-back noti-box">
       <div class="">
-        <img src="<?php echo asset('images/pending.png')?>" class="imagen-cuadrada"/>
+        <img src="{{asset('images/pending.png')}}" class="imagen-cuadrada"/>
       </div>
       <div class="text-box" >
         <p class="main-text">{{$cantPendiente}} Reclamos</p>
@@ -30,7 +30,7 @@
   <div class="col-md-3 col-sm-6 col-xs-6">
     <div class="panel-back noti-box">
       <div class="">
-        <img src="<?php echo asset('images/process.png')?>" class="imagen-cuadrada"/>
+        <img src="{{asset('images/process.png')}}" class="imagen-cuadrada"/>
       </div>
       <div class="text-box" >
         <p class="main-text">{{$cantProceso}} Reclamos</p>
@@ -41,7 +41,7 @@
   <div class="col-md-3 col-sm-6 col-xs-6">
     <div class="panel-back noti-box">
       <div class="">
-        <img src="<?php echo asset('images/confirm.png')?>" class="imagen-cuadrada"/>
+        <img src="{{asset('images/confirm.png')}}" class="imagen-cuadrada"/>
       </div>
       <div class="text-box" >
         <p class="main-text">{{$cantFinalizado}} Reclamos</p>

@@ -21,24 +21,16 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <img id="logo" src="<?php echo asset('images/logo.png')?>" alt="miCiudad" />
+          <img id="logo" src="{{ asset('images/logo.png') }}" alt="miCiudad" />
         </div>
         <div id="navbar" class="navbar-collapse collapse myheader">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Usuario" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Contraseña" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
-          </form>
+          <div class="navbar-right">
+            <button>
+              <a href="{{route('logout')}}" class="button">
+                <img src="{{asset('images/log_out.png')}}"/> Log out
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </nav>
@@ -50,7 +42,7 @@
           <ul class="nav nav-sidebar">
             <li class="active">Panel de Reclamos</li>
             <li><a href="/mapaCalor">Mapa de Calor</a></li>
-            <li><a href="/">Tabla de Reclamos</a></li>
+            <li><a href="/tablaPanel">Tabla de Reclamos</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li class="active">Administrar Reclamos</li>
