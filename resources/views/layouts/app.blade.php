@@ -25,10 +25,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse myheader">
           <div class="navbar-right">
-            <button>
-              <a href="{{route('logout')}}" class="button">
-                <img src="{{asset('images/log_out.png')}}"/> Log out
-              </a>
+            <form class="navbar-form navbar-right" method="GET" action="/logout">
+              @csrf
+              <button type="submit" class="btn btn-primary">
+                Logout
+              </button>
+            </form>
             </button>
           </div>
         </div>
