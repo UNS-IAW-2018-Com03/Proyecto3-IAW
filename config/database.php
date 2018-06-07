@@ -82,9 +82,9 @@ return [
         'driver'   => 'mongodb',
         'host'     => env('DB_HOST', 'ds113358.mlab.com'),
         'port'     => env('DB_PORT', 13358),
-        'database' => env('DB_DATABASE'),
-        'username' => env('DB_USERNAME'),
-        'password' => env('DB_PASSWORD'),
+        'database' => env('DB_DATABASE','reclamos'),
+        'username' => env('DB_USERNAME', 'manuelrios'),
+        'password' => env('DB_PASSWORD', 'malunchi94'),
         'options'  => [
             'database' => env('DB_DATABASE') // sets the authentication database required by mongo 3
           ]
