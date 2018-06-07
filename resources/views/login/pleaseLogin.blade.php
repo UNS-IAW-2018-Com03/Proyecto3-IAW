@@ -5,7 +5,7 @@
     <title>Mis Reclamos - Login</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"/>
 
 
     <!-- Custom styles -->
