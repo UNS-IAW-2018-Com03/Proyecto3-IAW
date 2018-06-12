@@ -86,8 +86,8 @@ class ReclamoController extends Controller
         $reclamoTipo = ReclamoTipo::find($id);
         if($request->hasFile('imagen')){
           $file = $request->file('imagen');
-          $name = $file->getClientOriginalName();
-          $file->move(public_path().'/images/',$name);
+          $name = 'img/'.$file->getClientOriginalName();
+          //$file->move(public_path().'/images/',$name);
           $reclamoTipo->imagen = $name;
         }
         $reclamoTipo->titulo = $request->input('titulo');
